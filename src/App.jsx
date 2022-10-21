@@ -151,7 +151,7 @@ function isJWTValid(token) {
   useEffect(() => {
     const title = import.meta.env.VITE_APP_NAME
     console.log(title)
-    document.title = title;
+    document.title = title ? title : "*-*";
     const token = localStorage.getItem("token");
     // console.log("Token: ", token);
     if(token && !isJWTValid(token)) {
